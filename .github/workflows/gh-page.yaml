@@ -12,10 +12,9 @@ jobs:
           node-version: 12.x
       - run: npm ci
       - run: npm run build
-      - run: echo "forward-head-posture.yoyota.dev" > ./build/CNAME
       - name: deploy
         uses: peaceiris/actions-gh-pages@v2
         env:
-          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./build

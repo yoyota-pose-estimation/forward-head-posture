@@ -15,10 +15,11 @@ const modelConfig = {
 
 function getKeypointsObject(pose) {
   return pose.keypoints.reduce((acc, { part, position }) => {
-    const { x, y } = position
+    const { x, y, score } = position
     acc[part] = {
       x: x / width,
-      y: y / height
+      y: y / height,
+      score
     }
     return acc
   }, {})
