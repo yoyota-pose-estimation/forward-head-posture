@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/forward-head-posture/static/js/main.3e6b132c.chunk.js",
-    "main.js.map": "/forward-head-posture/static/js/main.3e6b132c.chunk.js.map",
+    "main.js": "/forward-head-posture/static/js/main.a57a2957.chunk.js",
+    "main.js.map": "/forward-head-posture/static/js/main.a57a2957.chunk.js.map",
     "runtime-main.js": "/forward-head-posture/static/js/runtime-main.d52f6b4d.js",
     "runtime-main.js.map": "/forward-head-posture/static/js/runtime-main.d52f6b4d.js.map",
     "static/js/2.489a0e27.chunk.js": "/forward-head-posture/static/js/2.489a0e27.chunk.js",
     "static/js/2.489a0e27.chunk.js.map": "/forward-head-posture/static/js/2.489a0e27.chunk.js.map",
     "index.html": "/forward-head-posture/index.html",
-    "precache-manifest.ff951c50155d73d7660c8bd669e6747f.js": "/forward-head-posture/precache-manifest.ff951c50155d73d7660c8bd669e6747f.js",
+    "precache-manifest.9b01162ee52afe3c10cb87a708ed98df.js": "/forward-head-posture/precache-manifest.9b01162ee52afe3c10cb87a708ed98df.js",
     "service-worker.js": "/forward-head-posture/service-worker.js",
     "static/js/2.489a0e27.chunk.js.LICENSE": "/forward-head-posture/static/js/2.489a0e27.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.d52f6b4d.js",
     "static/js/2.489a0e27.chunk.js",
-    "static/js/main.3e6b132c.chunk.js"
+    "static/js/main.a57a2957.chunk.js"
   ]
 }
