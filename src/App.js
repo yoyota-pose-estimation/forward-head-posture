@@ -14,39 +14,22 @@ const modelConfig = {
 }
 
 function getKeypointsObject(pose) {
-  return pose.keypoints.reduce((acc, { part, position }) => {
-    const { x, y, score } = position
-    acc[part] = {
-      x: x / width,
-      y: y / height,
-      score
-    }
+  return pose.keypoints.reduce((acc, { part, position, score }) => {
+    const lPart = part.toLowerCase()
+    const { x, y } = position
+    acc[`${lPart}_x`] = x / width
+    acc[`${lPart}_y`] = y / height
+    acc[`${lPart}_score`] = score
     return acc
   }, {})
-}
-
-function getDirection(keypoints) {
-  const { leftEar, rightEar } = keypoints
-  if (leftEar && rightEar) {
-    return "front"
-  }
-  return leftEar ? "left" : "right"
 }
 
 function onEstimate(poses, date) {
   if (poses.length !== 1) return
   const [pose] = poses
-  const keypointsObject = getKeypointsObject(pose)
+  const keypoints = getKeypointsObject(pose)
 
-  const direction = getDirection(keypointsObject)
-  if (direction === "front") return
-
-  const ear = keypointsObject[`${direction}Ear`]
-  const hip = keypointsObject[`${direction}Hip`]
-  if (!ear || !hip) return
-
-  const distance = direction === "left" ? ear.x - hip.x : hip.x - ear.x
-  writeDistance(distance, date)
+  writeDistance(keypoints, date)
 }
 
 function App() {

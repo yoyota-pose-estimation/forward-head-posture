@@ -10,11 +10,11 @@ try {
 }
 
 // eslint-disable-next-line import/prefer-default-export
-export function writeDistance(distance, timestamp) {
+export function writeDistance(keypoints, timestamp) {
   influx.writePoints([
     {
-      fields: { distance },
-      measurement: "forward_head_posture",
+      fields: keypoints,
+      measurement: "pose",
       timestamp
     }
   ])
