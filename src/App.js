@@ -42,8 +42,8 @@ function App() {
         onEstimate={onEstimate}
         width={width}
         height={height}
-        minPoseConfidence={0.7}
-        minPartConfidence={0.95}
+        minPoseConfidence={0.6}
+        minPartConfidence={0.8}
       />
     </>
   )
