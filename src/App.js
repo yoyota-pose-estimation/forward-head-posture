@@ -25,10 +25,9 @@ function getKeypointsObject(pose) {
 }
 
 function onEstimate(poses, date) {
-  if (poses.length !== 1) return
+  if (poses.length < 1) return
   const [pose] = poses
   const keypoints = getKeypointsObject(pose)
-
   writeDistance(keypoints, date)
 }
 
@@ -43,6 +42,8 @@ function App() {
         onEstimate={onEstimate}
         width={width}
         height={height}
+        minPoseConfidence={0.7}
+        minPartConfidence={0.95}
       />
     </>
   )
